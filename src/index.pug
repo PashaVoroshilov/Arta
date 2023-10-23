@@ -1,0 +1,50 @@
+extends ./templates/layout
+block content
+  section.selection
+    .container
+      .selection__top
+        a.button-close.selection__close(href="#")
+          img(src="./img/icons/close.svg" alt="close icon")
+      .selection__wrapper
+        h2.title.selection__title.item-language(data-language="Get Unlimited <br>Access") Get Unlimited <br>Access
+        ul.selection__list
+          li.selection__item.selection-item
+            picture
+              source(srcset="./img/content/item-1.webp 375w, ./img/content/item-1@2x.webp 950w, ./img/content/item-1@3x.webp 1125w" type="image/webp" sizes="100vw")
+              source(srcset="./img/content/item-1.png 375w, ./img/content/item-1@2x.png 950w, ./img/content/item-1@3x.png 1125w" type="image/png" sizes="100vw")
+              img.selection-item__bg(src="./img/content/item-1.png" alt="Unlimited Art Creation")
+            .selection-item__title.item-language(data-language="Unlimited Art <br>Creation") Unlimited Art <br>Creation
+          li.selection__item.selection-item
+            picture
+              source(srcset="./img/content/item-2.webp 375w, ./img/content/item-2@2x.webp 950w, ./img/content/item-2@3x.webp 1125w" type="image/webp" sizes="100vw")
+              source(srcset="./img/content/item-2.png 375w, ./img/content/item-2@2x.png 950w, ./img/content/item-2@3x.png 1125w" type="image/png" sizes="100vw")
+              img.selection-item__bg(src="./img/content/item-2.png" alt="Unlimited Art Creation")
+            .selection-item__title.item-language(data-language="Exclusive <br>Styles") Exclusive <br>Styles
+          li.selection__item.selection-item
+            picture
+              source(srcset="./img/content/item-3.webp 375w, ./img/content/item-3@2x.webp 950w, ./img/content/item-3@3x.webp 1125w" type="image/webp" sizes="100vw")
+              source(srcset="./img/content/item-3.png 375w, ./img/content/item-3@2x.png 950w, ./img/content/item-3@3x.png 1125w" type="image/png" sizes="100vw")
+              img.selection-item__bg(src="./img/content/item-3.png" alt="Unlimited Art Creation")
+            .selection-item__title.item-language(data-language="Magic Avatars <br>With 20% Off") Magic Avatars <br>With 20% Off
+        .selection__cost.cost-list
+          a.button.cost-list__item.cost-item(href="https://apple.com/")
+            .label.cost-item__label.item-language(data-language="BEST OFFER") best offer
+            .cost-item__cell
+              .cost-item__title.item-language(data-language="YEARLY ACCESS") YEARLY ACCESS
+              .cost-item__text.item-language(data-language="Just {{price}} per year" data-price="$39.99") Just $39.99 per year
+            .cost-item__cell.cost-item__week
+              .cost-item__text.item-language(data-language="{{price}} <br>per week" data-price="$0.48") $0.48 <br>per week
+          a.button.button--gray.cost-list__item.cost-item(href="https://google.com/")
+            .cost-item__cell
+              .cost-item__title.item-language(data-language="WEEKLY ACCESS") YEARLY ACCESS
+            .cost-item__cell.cost-item__week
+              .cost-item__text.item-language(data-language="{{price}} <br>per week" data-price="$6.99") $6.99 <br>per week
+          a.button.button--white.cost-item.selection__continue.item-language(href="https://www.youtube.com/" data-language="Continue") Continue
+        nav.selection__nav.selection-nav
+          ul.selection-nav__list
+            li.selection-nav__item
+              a.selection-nav__link.item-language(href="#" data-language="Terms of Use") Terms of Use
+            li.selection-nav__item
+              a.selection-nav__link.item-language(href="#" data-language="Privacy Policy") Privacy Policy
+            li.selection-nav__item
+              a.selection-nav__link.item-language(href="#" data-language="Restore") Restore

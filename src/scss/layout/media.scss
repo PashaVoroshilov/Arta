@@ -1,0 +1,14 @@
+@mixin media($deviceWidth, $value: 'min', $retina: false, $dpi: 192) {
+	@if $retina {
+		@media
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: #{$dpi}dpi)
+		and (#{$value}-width: $deviceWidth) {
+			@content;
+		}
+	} @else {
+		@media screen and (#{$value}-width: $deviceWidth) {
+			@content;
+		}
+	}
+}

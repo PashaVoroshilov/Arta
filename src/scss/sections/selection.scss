@@ -1,0 +1,264 @@
+.selection {
+  //height: -webkit-fill-available; for real devices
+  //display: flex; for real devices
+  //align-items: flex-end; for real devices
+  height: 100vh;
+  background: #000 url("../img/bg/bg.jpg") top center / cover no-repeat;
+
+  @include media($iphoneSE, 'min', true) {
+    background: #000 url("../img/bg/bg@2x.jpg") top center / cover no-repeat;
+  }
+  @include media($iphoneSE, 'min', true, 230) {
+    background: #000 url("../img/bg/bg@3x.jpg") top center / cover no-repeat;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 28px var(--container-padding-mobile) 11px;
+
+    @include media($iphone13) {
+      padding: 15px var(--container-padding-mobile) 31px;
+    }
+  }
+}
+
+.selection__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.selection__close {
+  margin-left: -9px;
+}
+
+.selection__wrapper {
+  margin-top: auto;
+}
+
+.selection__title {
+  margin-bottom: 30px;
+
+  @include media($iphone6) {
+    margin-bottom: 40.7px;
+  }
+
+  .lang-de & {
+    margin-bottom: 20px;
+
+    @include media($iphone6, 'max') {
+      font-size: 25px;
+      line-height: 31px;
+    }
+
+    @include media($iphone6) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .lang-fr & {
+    @include media($iphone6) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}
+
+.selection__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 -7px 30px 0;
+
+  @include media($iphone6) {
+    margin: 0 -7px 41px 0;
+  }
+
+  @include media($iphone13) {
+    gap: 14px;
+    margin: 0 -14px 52px 0;
+  }
+}
+
+.selection-item {
+  width: calc(100% / 3 - 7px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 36.8vw;
+  padding: 10.8px 7.2px;
+
+  .lang-de & {
+    padding: 8px 5px;
+  }
+
+  @include media($iphone13) {
+    width: calc(100% / 3 - 14px);
+  }
+}
+
+.selection-item__bg {
+  @include centeredImg;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.selection-item__title {
+  position: relative;
+  font-size: 12px;
+  line-height: 13px;
+
+  .lang-de & {
+    @include media($iphone6, 'max') {
+      font-size: 11px;
+      line-height: 12px;
+    }
+  }
+
+  .lang-fr & {
+    font-size: 9px;
+    line-height: 10px;
+  }
+
+  .lang-ja & {
+    @include media($iphone6, 'max') {
+      font-size: 11px;
+    }
+  }
+
+  .lang-pt & {
+    @include media($iphone6, 'max') {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
+}
+
+.cost-list__item,
+.selection__cost {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.selection__continue {
+  font-weight: 590;
+  font-size: 18px;
+  justify-content: center;
+
+  .lang-de & {
+
+    @include media($iphone6, 'max') {
+      font-size: 16px;
+    }
+  }
+
+  @include media($iphone6) {
+    font-size: 20px;
+  }
+
+  @include media($iphone13) {
+    margin-top: 16px;
+  }
+}
+
+.selection__nav {
+  margin-top: 25px;
+
+  @include media($iphone13) {
+    margin-top: 40px;
+  }
+}
+
+.selection-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  .lang-de & {
+    gap: 20px;
+
+    @include media($iphone6, 'max') {
+      gap: initial;
+      justify-content: space-between;
+    }
+  }
+
+  .lang-es & {
+    @include media($iphone6, 'max') {
+      gap: 10px;
+    }
+  }
+
+  .lang-fr & {
+    gap: 10px;
+
+    @include media($iphone6, 'min') {
+      gap: 15px;
+    }
+  }
+
+  .lang-pt & {
+    gap: 20px;
+  }
+}
+
+.selection-nav__link {
+  font-size: 12.5px;
+  line-height: 15px;
+  letter-spacing: 0.577px;
+  color: rgba(255, 255, 255, 0.50);
+
+  .lang-de & {
+    font-size: 9px;
+    line-height: 10px;
+
+    @include media($iphone6) {
+      font-size: 10px;
+    }
+    @include media($iphone14Plus) {
+      font-size: 12px;
+    }
+  }
+
+  .lang-es & {
+    font-size: 10px;
+
+    @include media($iphone6) {
+      font-size: 12px;
+    }
+  }
+
+  .lang-fr & {
+    font-size: 10px;
+    line-height: 13px;
+
+    @include media($iphone6, 'max') {
+      font-size: 8.7px;
+    }
+
+    @include media($iphone13) {
+      font-size: 11px;
+    }
+  }
+
+  .lang-ja & {
+    @include media($iphone6, 'max') {
+      font-size: 10px;
+    }
+  }
+
+  .lang-pt & {
+    font-size: 10px;
+
+    @include media($iphone6) {
+      font-size: 11px;
+    }
+  }
+}
